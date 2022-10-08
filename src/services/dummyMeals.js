@@ -1,27 +1,27 @@
 const DUMMY_MEALS = [
   {
     id: 'm1',
-    name: 'Sushi',
-    description: 'Finest fish and veggies',
-    price: 22.99,
+    name: 'Dumplings with fried onion',
+    description: 'Cake filled with cottage cheese and potato mass.',
+    price: 14.99,
   },
   {
     id: 'm2',
-    name: 'Schnitzel',
-    description: 'A german specialty!',
-    price: 16.5,
+    name: 'Pork chop with potatoes and fried cabbage',
+    description: 'Traditional Polish dinner dish!',
+    price: 20.5,
   },
   {
     id: 'm3',
-    name: 'Barbecue Burger',
-    description: 'American, raw, meaty',
-    price: 12.99,
+    name: 'Mushroom soup',
+    description: 'Soup based on meat and vegetable broth with mushrooms.',
+    price: 8.99,
   },
   {
     id: 'm4',
-    name: 'Green Bowl',
-    description: 'Healthy...and green...',
-    price: 18.99,
+    name: 'Greek salad',
+    description: 'Iceberg lettuce, tomato, cucumber, peppers, olives, and feta cheese in vinaigrette sauce.',
+    price: 17.99,
   },
 ];
 

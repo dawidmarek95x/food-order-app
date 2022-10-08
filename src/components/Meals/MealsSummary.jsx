@@ -17,4 +17,4 @@ const MealsSummary = () => {
   );
 };
 
-export default MealsSummary
+export default MealsSummary;
