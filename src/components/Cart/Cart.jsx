@@ -1,21 +1,28 @@
+import Modal from 'components/UI/Modal';
 import React from 'react';
 import classes from './Cart.module.scss';
 
-const Cart = () => {
+const Cart = ({ onClose }) => {
   const cartItems = (
-    <ul className={classes['cart-ites']}>
-      {[{ id: 'c1', name: 'Sushi', amount: 2, price: 12.99 }].map(item => (
+    <ul className={classes['cart-items']}>
+      {[{ id: 'm1', name: 'Dumplings with fried onion', amount: 2, price: 14.99 }].map(item => (
         <li>{item.name}</li>
       ))}
     </ul>
   );
 
   return (
-    <div>
+    <Modal onClose={onClose}>
       {cartItems}
-      <div></div>
-      <div></div>
-    </div>
+      <div className={classes.total}>
+        <span>Total amount</span>
+        <span>29.98</span>
+      </div>
+      <div className={classes.actions}>
+        <button className={classes['button--alt']} onClick={onClose} >Close</button>
+        <button className={classes.button}>Order</button>
+      </div>
+    </Modal>
   );
 };
 

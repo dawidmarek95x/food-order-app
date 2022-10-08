@@ -1,8 +1,8 @@
 .cart-items {
-  list-style: none;
+  max-height: 20rem;
   margin: 0;
   padding: 0;
-  max-height: 20rem;
+  list-style: none;
   overflow: auto;
 }
 
@@ -10,33 +10,37 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: bold;
-  font-size: 1.5rem;
   margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .actions {
   text-align: right;
 
   & button {
-    font: inherit;
-    cursor: pointer;
-    background-color: transparent;
-    border: 1px solid #8a2b06;
-    padding: 0.5rem 2rem;
-    border-radius: 25px;
     margin-left: 1rem;
-  }
+    padding: 0.5rem 2rem;
+    border: 1px solid #8a2b06;
+    border-radius: 25px;
+    font: inherit;
+    background-color: transparent;
+    cursor: pointer;
 
-  &:hover,
-  & button:active {
-    background-color: #5a1a01;
-    border-color: #5a1a01;
-    color: white;
+    &:hover,
+    &:active {
+      background-color: #5a1a01;
+      border-color: #5a1a01;
+      color: white;
+    }
   }
 
   & .button {
     background-color: #8a2b06;
     color: white;
+
+    &--alt {
+      color: #8a2b06;
+    }
   }
 }
