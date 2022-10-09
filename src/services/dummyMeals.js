@@ -3,7 +3,7 @@ const DUMMY_MEALS = [
     id: 'm1',
     name: 'Dumplings with fried onion',
     description: 'Cake filled with cottage cheese and potato mass.',
-    price: 14.99,
+    price: 14.9,
   },
   {
     id: 'm2',
@@ -15,13 +15,13 @@ const DUMMY_MEALS = [
     id: 'm3',
     name: 'Mushroom soup',
     description: 'Soup based on meat and vegetable broth with mushrooms.',
-    price: 8.99,
+    price: 8.9,
   },
   {
     id: 'm4',
     name: 'Greek salad',
     description: 'Iceberg lettuce, tomato, cucumber, peppers, olives, and feta cheese in vinaigrette sauce.',
-    price: 17.99,
+    price: 17.50,
   },
 ];
 
