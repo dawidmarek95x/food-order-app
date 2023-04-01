@@ -7,11 +7,12 @@ interface Item {
   price: number;
 }
 
-interface CartContextProps {
+export interface CartContextProps {
   items: Item[];
   totalAmount: number;
   addItem: (item: Item) => void;
   removeItem: (id: string) => void;
+  clearCart: () => void;
 }
 
 const CartContext = createContext<CartContextProps>({
@@ -19,6 +20,7 @@ const CartContext = createContext<CartContextProps>({
   totalAmount: 0,
   addItem: item => {},
   removeItem: id => {},
+  clearCart: () => {},
 });
 
 export default CartContext;

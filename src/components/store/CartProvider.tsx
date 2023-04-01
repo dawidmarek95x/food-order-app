@@ -17,9 +17,13 @@ interface CartState {
 interface CartContextTypes extends CartState {
   addItem: (item: Item) => void;
   removeItem: (id: string) => void;
+  clearCart: () => void;
 }
 
-type Action = { type: 'ADD'; item: Item } | { type: 'REMOVE'; id: string };
+type Action =
+  | { type: 'ADD'; item: Item }
+  | { type: 'REMOVE'; id: string }
+  | { type: 'CLEAR' };
 
 const initialCartState: CartState = {
   items: [],
@@ -86,6 +90,10 @@ const cartReducer = (state: CartState, action: Action) => {
     };
   }
 
+  if (action.type === 'CLEAR') {
+    return initialCartState;
+  }
+
   return state;
 };
 
@@ -107,11 +115,16 @@ const CartProvider = ({ children }: CartProviderProps) => {
     dispatchCartAction({ type: 'REMOVE', id });
   };
 
+  const clearCartHandler = () => {
+    dispatchCartAction({ type: 'CLEAR' });
+  };
+
   const cartContext: CartContextTypes = {
     items: cartState.items,
     totalAmount: cartState.totalAmount,
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCartHandler,
+    clearCart: clearCartHandler,
   };
 
   return (
